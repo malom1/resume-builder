@@ -1,5 +1,9 @@
+import { useState } from "react"
+
 
 function Information ({resumeData, setResumeData}) {
+
+    const [isSubmit, setIsSubmit] = useState(false)
 
     const handleChanges = (e) => {
 
@@ -10,14 +14,14 @@ function Information ({resumeData, setResumeData}) {
     const handleSubmit = (e) => {
 
         e.preventDefault()
-        console.log(resumeData)
+        setIsSubmit(true)
     }
 
     return (
-        <div className="container">
+        <div className="info-container">
 
             <form onSubmit={handleSubmit}>
-                <div className="personal-info">
+                <div className="info-input">
 
                     <h1>Personal Information</h1>
 
@@ -56,14 +60,14 @@ function Information ({resumeData, setResumeData}) {
                     <label htmlFor="homeLocation">Location</label>
                     <input 
                         type="text" 
-                        name="location" 
+                        name="homeLocation" 
                         placeholder="City, State"
                         onChange={handleChanges}
                     />
 
                 </div>
 
-                <div className="education">
+                <div className="education-input">
 
                     <h1>Education</h1>
 
@@ -99,7 +103,7 @@ function Information ({resumeData, setResumeData}) {
 
                 </div>
 
-                <div className="experience">
+                <div className="work-input">
 
                     <h1>Work Experience</h1>
 
