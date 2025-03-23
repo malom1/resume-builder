@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./Information.css"
 
 
 function Information ({resumeData, setResumeData}) {
@@ -18,7 +19,7 @@ function Information ({resumeData, setResumeData}) {
     }
 
     return (
-        <div className="info-container">
+        <div className="input-container">
 
             <form onSubmit={handleSubmit}>
                 <div className="info-input">
