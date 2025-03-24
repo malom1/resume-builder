@@ -1,6 +1,12 @@
 import "./ResumePreview.css"
 
-export default function ResumePreview({resumeData}) {
+export default function ResumePreview({resumeData, isEditing, setIsEditing}) {
+
+    function handleEdit(){
+        console.log(isEditing)
+
+        setIsEditing(true)
+    }
 
     return(
         <div className="resume-preview">
@@ -21,6 +27,8 @@ export default function ResumePreview({resumeData}) {
                 <p>{resumeData.position}, {resumeData.workStart} - {resumeData.workEnd}</p>
                 <p>{resumeData.description}</p>
             </div>
+
+            <button onClick={handleEdit}>Edit</button>
 
         </div>
     )

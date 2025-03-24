@@ -5,6 +5,8 @@ import { useState } from 'react'
 
 function App() {
 
+  const [isEditing, setIsEditing] = useState(true)
+
   const [resumeData, setResumeData] = useState({
     firstname: '',
     lastname: '',
@@ -21,14 +23,26 @@ function App() {
     workEnd: '',
     workLocation: '',
     description: ''
-})
+  })
 
-  return (
-    <>
-    <Information resumeData={resumeData} setResumeData={setResumeData}/>
-    <ResumePreview resumeData={resumeData}/>
-    </>
-  )
+  if(isEditing===true){
+    return(
+      <Information resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
+    )
+  } else {
+      return(
+        <ResumePreview resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
+      )
+  }
+
+  // return (
+  //   <div className='main-container'>
+
+  //     <Information resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
+  //     <ResumePreview resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
+
+  //   </div>
+  // )
 }
 
 export default App

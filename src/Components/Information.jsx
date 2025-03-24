@@ -1,27 +1,30 @@
-import { useState } from "react"
 import "./Information.css"
 
 
-function Information ({resumeData, setResumeData}) {
+function Information ({resumeData, setResumeData, setIsEditing}) {
 
-    const [isSubmit, setIsSubmit] = useState(false)
+    
 
     const handleChanges = (e) => {
 
+        e.preventDefault()
+
         setResumeData({...resumeData, [e.target.name]: e.target.value})
+
+        setIsEditing(false)
 
     }
     
-    const handleSubmit = (e) => {
+    // const handleSubmit = (e) => {
 
-        e.preventDefault()
-        setIsSubmit(true)
-    }
+    //     e.preventDefault()
+    //     setIsEditing(false)
+    // }
 
     return (
         <div className="input-container">
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleChanges}>
                 <div className="info-input">
 
                     <h1>Personal Information</h1>
