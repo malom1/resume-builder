@@ -8,23 +8,20 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
     const handleChanges = (e) => {
 
         e.preventDefault()
-
         setResumeData({...resumeData, [e.target.name]: e.target.value})
-
-        setIsEditing(false)
 
     }
     
-    // const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
 
-    //     e.preventDefault()
-    //     setIsEditing(false)
-    // }
+        e.preventDefault()
+        setIsEditing(false)
+    }
 
     return (
         <div className="input-container">
 
-            <form onSubmit={handleChanges}>
+            <form onSubmit={handleSubmit}>
                 <div className="info-input">
 
                     <h1>Personal Information</h1>
@@ -32,40 +29,39 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <label htmlFor="firstname">First Name</label>
                     <input 
                         type="text" 
-                        name="firstname" 
-                        placeholder="Enter First Name"
+                        id="firstname" 
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="lastname">Last Name</label>
                     <input 
                         type="text" 
                         name="lastname" 
-                        placeholder="Enter Last Name"
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="email">Email</label>
                     <input 
                         type="mail" 
                         name="email" 
-                        placeholder="Enter Email"
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="phone">Phone Number</label>
                     <input 
                         type="text" 
                         name="phone" 
-                        placeholder="Enter Phone Number"
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="homeLocation">Location</label>
                     <input 
                         type="text" 
                         name="homeLocation" 
-                        placeholder="City, State"
                         onChange={handleChanges}
                     />
 
@@ -79,7 +75,6 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="school" 
-                        placeholder="Enter School Name"
                         onChange={handleChanges}
                     />
 
@@ -87,7 +82,6 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="major" 
-                        placeholder="Enter Major"
                         onChange={handleChanges}
                     />
 
@@ -115,7 +109,6 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="company" 
-                        placeholder="Enter Company Name"
                         onChange={handleChanges}
                     />
 
@@ -123,7 +116,6 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="position" 
-                        placeholder="Enter Position"
                         onChange={handleChanges}
                     />
 
@@ -131,7 +123,6 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="workLocation" 
-                        placeholder="City, State"
                         onChange={handleChanges}
                     />
 
@@ -151,13 +142,12 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <label htmlFor="description">Description</label>
                     <textarea 
                         name="description" 
-                        placeholder="Responsibilities"
                         onChange={handleChanges}>
                     </textarea>
 
                 </div>
 
-                <button>Submit</button>
+                <button className="submit-btn">Submit</button>
 
             </form>
 

@@ -8,21 +8,21 @@ function App() {
   const [isEditing, setIsEditing] = useState(true)
 
   const [resumeData, setResumeData] = useState({
-    firstname: '',
-    lastname: '',
-    email: '',
-    phone: '',
-    homeLocation: '',
-    school: '',
-    major: '',
+    firstname: 'John',
+    lastname: 'Doe',
+    email: 'johndoe@email.com',
+    phone: 123-456-7890,
+    homeLocation: 'Queens, NY',
+    school: 'Harvard University',
+    major: 'Computer Science',
     schoolStart: '',
     schoolEnd: '',
-    company: '',
-    position: '',
+    company: 'Google',
+    position: 'Software Engineer',
     workStart: '',
     workEnd: '',
-    workLocation: '',
-    description: ''
+    workLocation: 'San Francisco',
+    description:'description'
   })
 
   if(isEditing===true){
@@ -34,15 +34,6 @@ function App() {
         <ResumePreview resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
       )
   }
-
-  // return (
-  //   <div className='main-container'>
-
-  //     <Information resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
-  //     <ResumePreview resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
-
-  //   </div>
-  // )
 }
 
 export default App
