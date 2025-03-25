@@ -1,6 +1,6 @@
 import './App.css'
-import Information from './Components/Information'
-import ResumePreview from './Components/ResumePreview'
+import Information from './Components/Information/Information'
+import ResumePreview from './Components/ResumePreview/ResumePreview'
 import { useState } from 'react'
 
 function App() {
@@ -27,11 +27,11 @@ function App() {
 
   if(isEditing===true){
     return(
-      <Information resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
+      <Information resumeData={resumeData} setResumeData={setResumeData} setIsEditing={setIsEditing}/>
     )
   } else {
       return(
-        <ResumePreview resumeData={resumeData} setResumeData={setResumeData} isEditing={isEditing} setIsEditing={setIsEditing}/>
+        <ResumePreview resumeData={resumeData} setIsEditing={setIsEditing}/>
       )
   }
 }

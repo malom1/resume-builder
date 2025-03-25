@@ -31,7 +31,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         type="text" 
                         id="firstname" 
                         onChange={handleChanges}
-                        required
+                        // required
                     />
 
                     <label htmlFor="lastname">Last Name</label>
@@ -39,7 +39,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         type="text" 
                         name="lastname" 
                         onChange={handleChanges}
-                        required
+                        // required
                     />
 
                     <label htmlFor="email">Email</label>
@@ -47,7 +47,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         type="mail" 
                         name="email" 
                         onChange={handleChanges}
-                        required
+                        // required
                     />
 
                     <label htmlFor="phone">Phone Number</label>
@@ -55,7 +55,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         type="text" 
                         name="phone" 
                         onChange={handleChanges}
-                        required
+                        // required
                     />
 
                     <label htmlFor="homeLocation">Location</label>

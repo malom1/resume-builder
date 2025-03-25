@@ -1,9 +1,8 @@
 import "./ResumePreview.css"
 
-export default function ResumePreview({resumeData, isEditing, setIsEditing}) {
+export default function ResumePreview({resumeData, setIsEditing}) {
 
     function handleEdit(){
-        console.log(isEditing)
 
         setIsEditing(true)
     }
