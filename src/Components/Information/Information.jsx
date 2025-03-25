@@ -3,8 +3,6 @@ import "./Information.css"
 
 function Information ({resumeData, setResumeData, setIsEditing}) {
 
-    
-
     const handleChanges = (e) => {
 
         e.preventDefault()
