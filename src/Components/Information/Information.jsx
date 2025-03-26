@@ -4,17 +4,13 @@ import "./Information.css"
 function Information ({resumeData, setResumeData, setIsEditing}) {
 
     const handleChanges = (e) => {
-
-        e.preventDefault()
         setResumeData({...resumeData, [e.target.name]: e.target.value})
-
-    }
+    };
     
     const handleSubmit = (e) => {
-
-        e.preventDefault()
-        setIsEditing(false)
-    }
+        e.preventDefault();
+        setIsEditing(false);
+    };
 
     return (
         <div className="input-container">
@@ -29,7 +25,8 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <label htmlFor="firstname">First Name</label>
                     <input 
                         type="text" 
-                        id="firstname" 
+                        name="firstname"
+                        value={resumeData.firstname} 
                         onChange={handleChanges}
                         // required
                     />
@@ -38,6 +35,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="lastname" 
+                        value={resumeData.lastname}
                         onChange={handleChanges}
                         // required
                     />
@@ -46,6 +44,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="mail" 
                         name="email" 
+                        value={resumeData.email}
                         onChange={handleChanges}
                         // required
                     />
@@ -54,6 +53,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="phone" 
+                        value={resumeData.phone}
                         onChange={handleChanges}
                         // required
                     />
@@ -62,6 +62,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="homeLocation" 
+                        value={resumeData.homeLocation}
                         onChange={handleChanges}
                     />
 
@@ -75,6 +76,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="school" 
+                        value={resumeData.school}
                         onChange={handleChanges}
                     />
 
@@ -82,6 +84,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="major" 
+                        value={resumeData.major}
                         onChange={handleChanges}
                     />
 
@@ -89,6 +92,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="date" 
                         name="schoolStart"
+                        value={resumeData.schoolStart}
                         onChange={handleChanges}
                     />
 
@@ -96,6 +100,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="date" 
                         name="schoolEnd"
+                        value={resumeData.schoolEnd}
                         onChange={handleChanges}
                     />
 
@@ -109,6 +114,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="company" 
+                        value={resumeData.company}
                         onChange={handleChanges}
                     />
 
@@ -116,6 +122,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="position" 
+                        value={resumeData.position}
                         onChange={handleChanges}
                     />
 
@@ -123,6 +130,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="text" 
                         name="workLocation" 
+                        value={resumeData.workLocation}
                         onChange={handleChanges}
                     />
 
@@ -130,18 +138,21 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                     <input 
                         type="date" 
                         name="workStart"
+                        value={resumeData.workStart}
                         onChange={handleChanges}/>
 
                     <label htmlFor="workEnd">End Date</label>
                     <input 
                         type="date" 
                         name="workEnd"
+                        value={resumeData.workEnd}
                         onChange={handleChanges}
                     />
 
                     <label htmlFor="description">Description</label>
                     <textarea 
                         name="description" 
+                        value={resumeData.description}
                         onChange={handleChanges}>
                     </textarea>
 

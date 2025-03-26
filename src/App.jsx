@@ -23,17 +23,24 @@ function App() {
     workEnd: '',
     workLocation: 'San Francisco',
     description:'description'
-  })
+  });
 
-  if(isEditing===true){
-    return(
-      <Information resumeData={resumeData} setResumeData={setResumeData} setIsEditing={setIsEditing}/>
-    )
-  } else {
-      return(
-        <ResumePreview resumeData={resumeData} setIsEditing={setIsEditing}/>
-      )
-  }
+  return(
+    <div className='container'>
+      {isEditing ? (
+        <Information
+        resumeData={resumeData}
+        setResumeData={setResumeData}
+        setIsEditing={setIsEditing}
+        />
+      ) : (
+        <ResumePreview
+        resumeData={resumeData}
+        setIsEditing={setIsEditing}
+        />
+      )}
+    </div>
+  );
 }
 
 export default App
