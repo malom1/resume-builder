@@ -2,8 +2,9 @@ import "./ResumePreview.css"
 
 export default function ResumePreview({resumeData, setIsEditing}) {
 
-    function handleEdit(){
 
+    // Function to set editing variable to true
+    function handleEdit(){
         setIsEditing(true)
     }
 

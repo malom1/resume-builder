@@ -3,10 +3,12 @@ import "./Information.css"
 
 function Information ({resumeData, setResumeData, setIsEditing}) {
 
+    // Take information and set to reach resume data variable
     const handleChanges = (e) => {
         setResumeData({...resumeData, [e.target.name]: e.target.value})
     };
     
+    // Function to change window 
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsEditing(false);
