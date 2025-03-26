@@ -19,6 +19,8 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
     return (
         <div className="input-container">
 
+            <h1 className="title">Resume Generator</h1>
+
             <form onSubmit={handleSubmit}>
                 <div className="info-input">
 

@@ -37,9 +37,10 @@ label {
 }
 
 input, textarea{
-    width: 95%;
+    width: 96%;
     padding: 10px;
     margin-top: 5px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;

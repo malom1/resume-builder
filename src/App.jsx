@@ -11,7 +11,7 @@ function App() {
     firstname: 'John',
     lastname: 'Doe',
     email: 'johndoe@email.com',
-    phone: 123-456-7890,
+    phone: 1234567890,
     homeLocation: 'Queens, NY',
     school: 'Harvard University',
     major: 'Computer Science',
