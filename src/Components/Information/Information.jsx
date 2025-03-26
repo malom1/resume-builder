@@ -28,7 +28,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="firstname"
                         value={resumeData.firstname} 
                         onChange={handleChanges}
-                        // required
+                        required
                     />
 
                     <label htmlFor="lastname">Last Name</label>
@@ -37,7 +37,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="lastname" 
                         value={resumeData.lastname}
                         onChange={handleChanges}
-                        // required
+                        required
                     />
 
                     <label htmlFor="email">Email</label>
@@ -46,7 +46,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="email" 
                         value={resumeData.email}
                         onChange={handleChanges}
-                        // required
+                        required
                     />
 
                     <label htmlFor="phone">Phone Number</label>
@@ -55,7 +55,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="phone" 
                         value={resumeData.phone}
                         onChange={handleChanges}
-                        // required
+                        required
                     />
 
                     <label htmlFor="homeLocation">Location</label>
@@ -64,6 +64,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="homeLocation" 
                         value={resumeData.homeLocation}
                         onChange={handleChanges}
+                        required
                     />
 
                 </div>
@@ -78,6 +79,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="school" 
                         value={resumeData.school}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="major">Major</label>
@@ -86,6 +88,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="major" 
                         value={resumeData.major}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="schoolStart">Start Date</label>
@@ -94,6 +97,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="schoolStart"
                         value={resumeData.schoolStart}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="schoolEnd">End Date</label>
@@ -102,6 +106,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="schoolEnd"
                         value={resumeData.schoolEnd}
                         onChange={handleChanges}
+                        required
                     />
 
                 </div>
@@ -116,6 +121,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="company" 
                         value={resumeData.company}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="position">Position</label>
@@ -124,6 +130,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="position" 
                         value={resumeData.position}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="workLocation">Location</label>
@@ -132,6 +139,7 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="workLocation" 
                         value={resumeData.workLocation}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="workStart">Start Date</label>
@@ -139,7 +147,10 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         type="date" 
                         name="workStart"
                         value={resumeData.workStart}
-                        onChange={handleChanges}/>
+                        onChange={handleChanges}
+                        required
+                    />
+
 
                     <label htmlFor="workEnd">End Date</label>
                     <input 
@@ -147,13 +158,17 @@ function Information ({resumeData, setResumeData, setIsEditing}) {
                         name="workEnd"
                         value={resumeData.workEnd}
                         onChange={handleChanges}
+                        required
                     />
 
                     <label htmlFor="description">Description</label>
                     <textarea 
                         name="description" 
                         value={resumeData.description}
-                        onChange={handleChanges}>
+                        onChange={handleChanges}
+                        required
+                    >
+
                     </textarea>
 
                 </div>
